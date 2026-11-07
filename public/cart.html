@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cart">
+
+<header class="navbar">
+    <h2>🛍️ Mounika Shopping Mall</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">My Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+</header>
+
+<section class="page-banner">
+    <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=1400" alt="Shopping bags">
+    <div class="banner-text">
+        <h1>Your Shopping Cart</h1>
+        <p>Review your selected shopping items.</p>
+    </div>
+</section>
+
+<section class="container form-box">
+    <h2>Add Cart Item</h2>
+
+    <form id="cartForm">
+        <label>Customer ID</label>
+        <select id="cartUserId" required>
+            <option value="">Select Customer</option>
+        </select>
+
+        <input type="text" id="cartCustomerName" placeholder="Customer Name" readonly>
+        <input type="email" id="cartCustomerEmail" placeholder="Email" readonly>
+
+        <label>Product ID</label>
+        <select id="cartProductId" required>
+            <option value="">Select Product</option>
+        </select>
+
+        <input type="text" id="cartProductName" placeholder="Product Name" readonly>
+        <input type="number" id="cartPrice" placeholder="Price" readonly>
+
+        <label>Quantity</label>
+        <input type="number" id="cartQuantity" min="1" value="1" required>
+
+        <button type="submit" class="btn">Add to Cart</button>
+    </form>
+</section>
+
+<section class="container">
+    <h2>Cart Details</h2>
+
+    <label>Select Customer ID to View Cart</label>
+    <select id="viewCartUserId">
+        <option value="">Select Customer</option>
+    </select>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Cart ID</th>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cartTable"></tbody>
+        </table>
+    </div>
+
+    <h3 id="cartTotal">Total: ₹0</h3>
+</section>
+
+<footer>
+    <p>© 2026 Mounika Shopping Mall</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="products">
+
+<header class="navbar">
+    <h2>🛍️ Mounika Shopping Mall</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">My Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+</header>
+
+<section class="page-banner">
+    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1400" alt="Shopping fashion">
+    <div class="banner-text">
+        <h1>Our Shopping Collection</h1>
+        <p>Discover the latest products at great prices.</p>
+    </div>
+</section>
+
+<section class="container">
+    <h2>Shop By Category</h2>
+
+    <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option>Clothing</option>
+        <option>Footwear</option>
+        <option>Accessories</option>
+        <option>Beauty</option>
+        <option>Home & Kitchen</option>
+        <option>Kids</option>
+    </select>
+
+    <div id="productList" class="product-grid"></div>
+</section>
+
+<section class="container form-box">
+    <h2>Add Product to Your Cart</h2>
+
+    <form id="addCartForm">
+        <label>Customer ID</label>
+        <select id="shopUserId" required>
+            <option value="">Select Customer ID</option>
+        </select>
+
+        <label>Product ID</label>
+        <select id="shopProductId" required>
+            <option value="">Select Product ID</option>
+        </select>
+
+        <input type="text" id="shopProductName" placeholder="Product Name" readonly>
+        <input type="text" id="shopPrice" placeholder="Price" readonly>
+        <input type="number" id="shopStock" placeholder="Available Stock" readonly>
+
+        <label>Quantity</label>
+        <input type="number" id="shopQuantity" min="1" value="1" required>
+
+        <button type="submit" class="btn">Add to Cart</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Mounika Shopping Mall</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Orders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="orders">
+
+<header class="navbar">
+    <h2>🛍️ Mounika Shopping Mall</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">My Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+</header>
+
+<section class="page-banner">
+    <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=1400" alt="Shopping packages">
+    <div class="banner-text">
+        <h1>Order Management</h1>
+        <p>Place orders and track your purchases.</p>
+    </div>
+</section>
+
+<section class="container form-box">
+    <h2>Place Your Order</h2>
+
+    <form id="orderForm">
+        <label>Customer ID</label>
+        <select id="orderUserId" required>
+            <option value="">Select Customer</option>
+        </select>
+
+        <input type="text" id="orderCustomerName" placeholder="Customer Name" readonly>
+        <input type="email" id="orderCustomerEmail" placeholder="Email" readonly>
+
+        <p>Your order total will be calculated from your cart.</p>
+
+        <button type="submit" class="btn">Place Order</button>
+    </form>
+
+    <p id="orderMessage"></p>
+</section>
+
+<section class="container">
+    <h2>Order History</h2>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Email</th>
+                    <th>Total Amount</th>
+                    <th>Order Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="orderTable"></tbody>
+        </table>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Mounika Shopping Mall</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
